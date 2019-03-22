@@ -1,14 +1,13 @@
 /* eslint-disable no-console, no-process-exit */
 const imdb = require('./src/imdb');
-const DENZEL_IMDB_ID = 'nm0000243';
-
+var DENZEL_IMDB_ID = 'nm0000243';
 const Express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 
 const CONNEXION_URL="mongodb+srv://RubenAmr:Kesako65@denzelcluster-mfliu.mongodb.net/test?retryWrites=true";
-DATABASE_NAME="Denzel";
+const DATABASE_NAME="Denzel";
 
 
 var app = Express();

@@ -7,17 +7,17 @@ const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 
+const DATABASE_NAME = "movies";
+const DENZEL_IMDB_ID = 'nm0000243';
+const app = Express()
 
-const app = express()
-
-app.use(cors())
 
 const homePath = '/graphiql'
 const URL = 'http://localhost'
 const port = 9292
-const MONGO_URL = 'mongodb+srv://RubenAmr:Kesako65@denzelcluster-mfliu.mongodb.net/test?retryWrites=true'
+const uri = 'mongodb+srv://RubenAmr:Kesako65@denzelcluster-mfliu.mongodb.net/test?retryWrites=true'
 
-
+var database,collection;
 
   async function start(){
     try {
